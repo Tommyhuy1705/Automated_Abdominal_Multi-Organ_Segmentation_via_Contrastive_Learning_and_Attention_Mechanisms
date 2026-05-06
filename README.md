@@ -31,13 +31,13 @@ synapse-multiorgan-segmentation/
 └── app/                   # Triển khai ứng dụng app.py (Gradio UI), inference.py
 ```
 4. Methodology Summary
-- Tiền xử lý (Preprocessing): Trích xuất ảnh cắt ngang (axial slices) từ khối 3D; Kẹp cửa sổ Hounsfield Unit (HU windowing) trong khoảng [-125, 275] để làm nổi bật mô mềm; Resize ảnh về kích thước 224x224[cite: 4].
-- Data Augmentation: Áp dụng các kỹ thuật augmentation đặc thù cho ảnh y tế bằng thư viện Albumentations (ElasticTransform, GridDistortion, Random Rotation)[cite: 4].
+- Tiền xử lý (Preprocessing): Trích xuất ảnh cắt ngang (axial slices) từ khối 3D; Kẹp cửa sổ Hounsfield Unit (HU windowing) trong khoảng [-125, 275] để làm nổi bật mô mềm; Resize ảnh về kích thước 224x224.
+- Data Augmentation: Áp dụng các kỹ thuật augmentation đặc thù cho ảnh y tế bằng thư viện Albumentations (ElasticTransform, GridDistortion, Random Rotation).
 - Mô hình & Huấn luyện (Models & Training):
-  Sử dụng kiến trúc lai kết hợp sức mạnh trích xuất đặc trưng cục bộ của ResNet50 và khả năng nắm bắt ngữ cảnh toàn cục của Transformer (TransUNet)[cite: 4].
-  Ứng dụng Pixel-level Contrastive Learning làm auxiliary loss kết hợp với DiceCE Loss để tăng khả năng phân biệt ranh giới giữa các cơ quan nội tạng[cite: 4]. Optimizer: AdamW; Scheduler: Cosine[cite: 4].
-- Đánh giá (Evaluation): Benchmark hiệu năng thông qua các chỉ số: Mean DSC (Dice Score), IoU, HD95 (95th-percentile Hausdorff Distance), và số lượng Parameters[cite: 4].
-- Ứng dụng (Deployment): Xây dựng luồng dữ liệu (Data flow) thông qua Gradio UI: Upload ảnh CT -> Chọn Mô hình -> Tiền xử lý & Suy luận -> Overlay Mask phân vùng lên ảnh gốc[cite: 4].
+  Sử dụng kiến trúc lai kết hợp sức mạnh trích xuất đặc trưng cục bộ của ResNet50 và khả năng nắm bắt ngữ cảnh toàn cục của Transformer (TransUNet).
+  Ứng dụng Pixel-level Contrastive Learning làm auxiliary loss kết hợp với DiceCE Loss để tăng khả năng phân biệt ranh giới giữa các cơ quan nội tạng. Optimizer: AdamW; Scheduler: Cosine.
+- Đánh giá (Evaluation): Benchmark hiệu năng thông qua các chỉ số: Mean DSC (Dice Score), IoU, HD95 (95th-percentile Hausdorff Distance), và số lượng Parameters.
+- Ứng dụng (Deployment): Xây dựng luồng dữ liệu (Data flow) thông qua Gradio UI: Upload ảnh CT -> Chọn Mô hình -> Tiền xử lý & Suy luận -> Overlay Mask phân vùng lên ảnh gốc.
 
 5. Dataset Details
 - Cấu trúc chia tập: 18 bệnh nhân cho tập Train, 12 bệnh nhân cho tập Test để tránh rò rỉ dữ liệu (Patient-wise split).
