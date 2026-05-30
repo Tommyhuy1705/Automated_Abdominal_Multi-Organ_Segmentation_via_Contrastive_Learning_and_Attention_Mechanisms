@@ -176,6 +176,7 @@ def predict_mask(
 def colorize_mask(mask: np.ndarray, alpha: float = 1.0) -> np.ndarray:
     cmap = plt.get_cmap("tab20", NUM_CLASSES)
     rgba = cmap(mask / max(1, NUM_CLASSES - 1))
+    rgba[mask == 0, :3] = 0.0
     rgba[..., 3] = np.where(mask == 0, 0.0, alpha)
     return rgba
 
@@ -205,7 +206,9 @@ def legend_rows() -> list[tuple[str, str]]:
     cmap = plt.get_cmap("tab20", NUM_CLASSES)
     rows: list[tuple[str, str]] = []
     for class_id, name in CLASS_NAMES.items():
-        color = cmap(class_id / max(1, NUM_CLASSES - 1))[:3]
+        color = (0.0, 0.0, 0.0) if class_id == 0 else cmap(
+            class_id / max(1, NUM_CLASSES - 1)
+        )[:3]
         rgb = tuple(int(round(channel * 255)) for channel in color)
         rows.append((name, f"rgb{rgb}"))
     return rows
