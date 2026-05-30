@@ -42,3 +42,43 @@ synapse-multiorgan-segmentation/
 5. Dataset Details
 - Cấu trúc chia tập: 18 bệnh nhân cho tập Train, 12 bệnh nhân cho tập Test để tránh rò rỉ dữ liệu (Patient-wise split).
 - Số lượng nhãn (Classes): 9 classes (Bao gồm Nền (0) và 8 cơ quan nội tạng: Lách, Thận phải, Thận trái, Túi mật, Gan, Dạ dày, Động mạch chủ, và Tuyến tụy).
+
+## 6. Streamlit Web Demo
+
+Ứng dụng demo nằm trong `app/streamlit_app.py`. App cho phép upload một CT slice hoặc file `.npy/.npz`, chọn biến thể model trên Kaggle Model, chạy inference và hiển thị ảnh đầu vào, mask dự đoán, overlay cùng legend 9 lớp.
+
+Các biến thể model:
+
+- `resnet-unet`: baseline, `contrastive_weight = 0.0`
+- `resnet-unet-cw001`: `contrastive_weight = 0.01`
+- `resnet-unet-cw003`: `contrastive_weight = 0.03`
+- `resnet-unet-cw005`: `contrastive_weight = 0.05`
+- `transunet`: baseline, `contrastive_weight = 0.0`
+- `transunet-cw001`: `contrastive_weight = 0.01`
+- `transunet-cw003`: `contrastive_weight = 0.03`
+- `transunet-cw005`: `contrastive_weight = 0.05`
+
+Chạy local:
+
+```bash
+pip install -r requirements.txt
+streamlit run app/streamlit_app.py
+```
+
+Deploy lên Streamlit Community Cloud:
+
+1. Push repo lên GitHub.
+2. Vào `https://share.streamlit.io`, chọn **Create app**.
+3. Chọn repository, branch, và main file path: `app/streamlit_app.py`.
+4. Trong **Advanced settings**, chọn Python version tương thích với PyTorch, khuyến nghị Python 3.11 hoặc 3.12.
+5. Nếu Kaggle Model ở chế độ private, dán secrets bên dưới vào phần **Secrets**.
+6. Deploy và theo dõi build log trong Streamlit Cloud.
+
+Nếu Kaggle Model ở chế độ private, thêm secrets trên Streamlit Cloud:
+
+```toml
+KAGGLE_USERNAME = "your-kaggle-username"
+KAGGLE_KEY = "your-kaggle-api-key"
+```
+
+Không cần API inference riêng trong phiên bản này: Streamlit tải checkpoint bằng `kagglehub`, load PyTorch model và chạy inference trực tiếp. Nếu muốn dùng checkpoint local thay vì tải từ Kaggle, set biến môi trường như `TRANSUNET_CW001_MODEL_DIR` hoặc `RESNET_UNET_MODEL_DIR` trỏ tới thư mục chứa file `.pt/.pth`.
