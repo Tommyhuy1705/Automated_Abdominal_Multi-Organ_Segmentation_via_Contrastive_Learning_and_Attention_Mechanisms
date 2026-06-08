@@ -1,0 +1,546 @@
+{
+  "ResNet-UNet cw0": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/resnet-unet",
+    "architecture": "ResNetUNet",
+    "variation": "resnet-unet",
+    "contrastive_label": "cw0",
+    "contrastive_weight": 0.0,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet/3",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet/3/best_resnet_unet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "resnet_unet_synapse",
+      "architecture": "ResNetUNet",
+      "kaggle_model_variation": "resnet-unet",
+      "contrastive_label": "cw0",
+      "contrastive_weight": 0.0,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 12,
+      "epochs_requested": 120,
+      "early_stopping_patience": 20,
+      "pretrained_encoder": true,
+      "checkpoint": "/kaggle/working/tensura3607/models/resnet_unet/resnet-unet/best_resnet_unet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "test_metrics": {
+        "loss": 0.34637160900667424,
+        "dice_mean": 0.82086883145187,
+        "iou_mean": 0.712301505967476,
+        "pixel_acc": 0.9925189226778881,
+        "dice_per_class": [
+          0.9965368110999733,
+          0.8616951698077481,
+          0.6795662981064551,
+          0.9278171088771667,
+          0.8908686801934274,
+          0.9446240511807907,
+          0.5959093042156852,
+          0.8975298102608069,
+          0.7689402289728796
+        ],
+        "iou_per_class": [
+          0.9930975267686242,
+          0.7569986061311545,
+          0.5146538573901702,
+          0.8653533987149896,
+          0.8032129868524964,
+          0.8950592935509579,
+          0.4244094103074617,
+          0.8141080081930978,
+          0.6246164865994791
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  },
+  "ResNet-UNet cw001": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/resnet-unet-cw001",
+    "architecture": "ResNetUNet",
+    "variation": "resnet-unet-cw001",
+    "contrastive_label": "cw010",
+    "contrastive_weight": 0.01,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet-cw001/1",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet-cw001/1/best_resnet_unet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "resnet_unet_synapse",
+      "architecture": "ResNetUNet",
+      "kaggle_model_variation": "resnet-unet-cw001",
+      "contrastive_label": "cw001",
+      "contrastive_weight": 0.01,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 12,
+      "epochs_requested": 120,
+      "early_stopping_patience": 20,
+      "pretrained_encoder": true,
+      "checkpoint": "/kaggle/working/tensura3607/models/resnet_unet/resnet-unet-cw001/best_resnet_unet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "test_metrics": {
+        "loss": 0.3507644989108311,
+        "dice_mean": 0.8124904544683117,
+        "iou_mean": 0.7044614862824505,
+        "pixel_acc": 0.9927205979848891,
+        "dice_per_class": [
+          0.9966194970931996,
+          0.8692010118424244,
+          0.6437852806485148,
+          0.9116471423395873,
+          0.9033314997728268,
+          0.9440969315137322,
+          0.5462812518065222,
+          0.9045531606606506,
+          0.7770273571622356
+        ],
+        "iou_per_class": [
+          0.9932617727830928,
+          0.7686609388099658,
+          0.47469273962588965,
+          0.8376393151568191,
+          0.8237051575619759,
+          0.8941132568798981,
+          0.3757819402726844,
+          0.8257389844734114,
+          0.6353595574789599
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  },
+  "ResNet-UNet cw003": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/resnet-unet-cw003",
+    "architecture": "ResNetUNet",
+    "variation": "resnet-unet-cw003",
+    "contrastive_label": "cw030",
+    "contrastive_weight": 0.03,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet-cw003/1",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet-cw003/1/best_resnet_unet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "resnet_unet_synapse",
+      "architecture": "ResNetUNet",
+      "kaggle_model_variation": "resnet-unet-cw003",
+      "contrastive_label": "cw003",
+      "contrastive_weight": 0.03,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 12,
+      "epochs_requested": 120,
+      "early_stopping_patience": 20,
+      "pretrained_encoder": true,
+      "checkpoint": "/kaggle/working/tensura3607/models/resnet_unet/resnet-unet-cw003/best_resnet_unet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "test_metrics": {
+        "loss": 0.3490899719923507,
+        "dice_mean": 0.8012037142830715,
+        "iou_mean": 0.689031432262422,
+        "pixel_acc": 0.991945685371167,
+        "dice_per_class": [
+          0.9965473103920863,
+          0.880183958111371,
+          0.6862814425707489,
+          0.9270885468344566,
+          0.9080872746276729,
+          0.9461869870834757,
+          0.5299185936689841,
+          0.8288189670570895,
+          0.7030639443107739
+        ],
+        "iou_per_class": [
+          0.9931183808789974,
+          0.7860076344566543,
+          0.5223960936617232,
+          0.8640867278461726,
+          0.8316482201616231,
+          0.8978699024268252,
+          0.3604688770208648,
+          0.7076779282998672,
+          0.5420960742256461
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  },
+  "ResNet-UNet cw005": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/resnet-unet-cw005",
+    "architecture": "ResNetUNet",
+    "variation": "resnet-unet-cw005",
+    "contrastive_label": "cw050",
+    "contrastive_weight": 0.05,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet-cw005/1",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/resnet-unet-cw005/1/best_resnet_unet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "resnet_unet_synapse",
+      "architecture": "ResNetUNet",
+      "kaggle_model_variation": "resnet-unet-cw005",
+      "contrastive_label": "cw005",
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 12,
+      "epochs_requested": 120,
+      "early_stopping_patience": 20,
+      "pretrained_encoder": true,
+      "checkpoint": "/kaggle/working/tensura3607/models/resnet_unet/resnet-unet-cw005/best_resnet_unet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "test_metrics": {
+        "loss": 0.34868363313775025,
+        "dice_mean": 0.8053409771693483,
+        "iou_mean": 0.6942000927765116,
+        "pixel_acc": 0.992536259611067,
+        "dice_per_class": [
+          0.9966192680591427,
+          0.8701520981780567,
+          0.612008981171527,
+          0.9240703500064154,
+          0.8946010648657549,
+          0.9481614252975235,
+          0.5693045323178529,
+          0.8678118341024463,
+          0.7566175314152096
+        ],
+        "iou_per_class": [
+          0.9932613177964502,
+          0.7701497668624485,
+          0.440931513871994,
+          0.8588575935350107,
+          0.8093015439327949,
+          0.9014324518053763,
+          0.39792153199486385,
+          0.7664908186127531,
+          0.6085155215968512
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  },
+  "TransUNet cw0": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/transunet",
+    "architecture": "TransUNet",
+    "variation": "transunet",
+    "contrastive_label": "cw0",
+    "contrastive_weight": 0.0,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet/4",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet/4/best_transunet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "transunet_synapse",
+      "architecture": "TransUNet",
+      "kaggle_model_variation": "transunet",
+      "contrastive_label": "cw0",
+      "contrastive_weight": 0.0,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 4,
+      "epochs_requested": 150,
+      "early_stopping_patience": 20,
+      "training_strategy": "full_vit_fine_tuning_plus_supervised_pixel_contrastive_sweep",
+      "checkpoint": "/kaggle/working/tensura3607/models/transunet/transunet/best_transunet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "pretrained_encoder": true,
+      "pretrained_transformer": true,
+      "transformer_model_name": "vit_base_patch16_224.augreg_in21k",
+      "freeze_first_n_transformer_blocks": 0,
+      "test_metrics": {
+        "loss": 0.3632713703020495,
+        "dice_mean": 0.8193650845210485,
+        "iou_mean": 0.7129031112050711,
+        "pixel_acc": 0.9926834201773024,
+        "dice_per_class": [
+          0.9966034150496486,
+          0.8781966924808345,
+          0.6271931855015342,
+          0.9338521632645962,
+          0.8876725287500747,
+          0.9492957969404969,
+          0.5988593463054782,
+          0.9042072482471507,
+          0.7756437146782235
+        ],
+        "iou_per_class": [
+          0.993229825571871,
+          0.7828437361475356,
+          0.4568692250642178,
+          0.8759124495568397,
+          0.7980316513739002,
+          0.9034852950776092,
+          0.42740844377523185,
+          0.825162647590794,
+          0.6335114410544406
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  },
+  "TransUNet cw001": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/transunet-cw001",
+    "architecture": "TransUNet",
+    "variation": "transunet-cw001",
+    "contrastive_label": "cw010",
+    "contrastive_weight": 0.01,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet-cw001/2",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet-cw001/2/best_transunet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "transunet_synapse",
+      "architecture": "TransUNet",
+      "kaggle_model_variation": "transunet-cw001",
+      "contrastive_label": "cw001",
+      "contrastive_weight": 0.01,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 4,
+      "epochs_requested": 150,
+      "early_stopping_patience": 20,
+      "training_strategy": "full_vit_fine_tuning_plus_supervised_pixel_contrastive_sweep",
+      "checkpoint": "/kaggle/working/tensura3607/models/transunet/transunet-cw001/best_transunet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "pretrained_encoder": true,
+      "pretrained_transformer": true,
+      "transformer_model_name": "vit_base_patch16_224.augreg_in21k",
+      "freeze_first_n_transformer_blocks": 0,
+      "test_metrics": {
+        "loss": 0.36418285931707645,
+        "dice_mean": 0.8273127267481646,
+        "iou_mean": 0.72335091535056,
+        "pixel_acc": 0.9930156436079693,
+        "dice_per_class": [
+          0.9966710981093876,
+          0.8829287440354974,
+          0.6300659288450968,
+          0.9320191747681759,
+          0.8937656774371202,
+          0.9495945689965978,
+          0.622419275863942,
+          0.9152840910153465,
+          0.7924243530235398
+        ],
+        "iou_per_class": [
+          0.9933642858601209,
+          0.7903960820057865,
+          0.4599242708921007,
+          0.8726927981744453,
+          0.8079352260256528,
+          0.904026712894561,
+          0.4518205466721986,
+          0.8438007439866221,
+          0.6562109421531119
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  },
+  "TransUNet cw003": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/transunet-cw003",
+    "architecture": "TransUNet",
+    "variation": "transunet-cw003",
+    "contrastive_label": "cw030",
+    "contrastive_weight": 0.03,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet-cw003/2",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet-cw003/2/best_transunet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "transunet_synapse",
+      "architecture": "TransUNet",
+      "kaggle_model_variation": "transunet-cw003",
+      "contrastive_label": "cw003",
+      "contrastive_weight": 0.03,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 4,
+      "epochs_requested": 150,
+      "early_stopping_patience": 20,
+      "training_strategy": "full_vit_fine_tuning_plus_supervised_pixel_contrastive_sweep",
+      "checkpoint": "/kaggle/working/tensura3607/models/transunet/transunet-cw003/best_transunet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "pretrained_encoder": true,
+      "pretrained_transformer": true,
+      "transformer_model_name": "vit_base_patch16_224.augreg_in21k",
+      "freeze_first_n_transformer_blocks": 0,
+      "test_metrics": {
+        "loss": 0.36471257640086874,
+        "dice_mean": 0.8210763112815078,
+        "iou_mean": 0.7152045939658872,
+        "pixel_acc": 0.9928976279008096,
+        "dice_per_class": [
+          0.9966768393525803,
+          0.880910527530744,
+          0.6373011871484684,
+          0.9382713139004649,
+          0.9140302098890207,
+          0.955249018878685,
+          0.6226940883684257,
+          0.8850479822923558,
+          0.7351061622438985
+        ],
+        "iou_per_class": [
+          0.9933756923436805,
+          0.7871672008379746,
+          0.4676757484040778,
+          0.8837204138727942,
+          0.8416718570004235,
+          0.9143317748823104,
+          0.4521102270091011,
+          0.793799166453874,
+          0.5811603632665424
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  },
+  "TransUNet cw005": {
+    "handle": "tensura3607/abdominal-multi-organ-segmentation/pyTorch/transunet-cw005",
+    "architecture": "TransUNet",
+    "variation": "transunet-cw005",
+    "contrastive_label": "cw050",
+    "contrastive_weight": 0.05,
+    "source": "kagglehub",
+    "model_dir": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet-cw005/2",
+    "checkpoint_path": "/kaggle/input/models/tensura3607/abdominal-multi-organ-segmentation/pytorch/transunet-cw005/2/best_transunet.pt",
+    "model_info": {
+      "owner": "tensura3607",
+      "model_name": "transunet_synapse",
+      "architecture": "TransUNet",
+      "kaggle_model_variation": "transunet-cw005",
+      "contrastive_label": "cw005",
+      "contrastive_weight": 0.05,
+      "contrastive_temperature": 0.1,
+      "contrastive_max_samples": 2048,
+      "contrastive_include_background": false,
+      "num_classes": 9,
+      "image_size": [
+        224,
+        224
+      ],
+      "batch_size": 4,
+      "epochs_requested": 150,
+      "early_stopping_patience": 20,
+      "training_strategy": "full_vit_fine_tuning_plus_supervised_pixel_contrastive_sweep",
+      "checkpoint": "/kaggle/working/tensura3607/models/transunet/transunet-cw005/best_transunet.pt",
+      "data_root": "/kaggle/input/datasets/tensura3607/synapse-multi-organ/Synapse",
+      "pretrained_encoder": true,
+      "pretrained_transformer": true,
+      "transformer_model_name": "vit_base_patch16_224.augreg_in21k",
+      "freeze_first_n_transformer_blocks": 0,
+      "test_metrics": {
+        "loss": 0.36204415685212127,
+        "dice_mean": 0.8296991195477417,
+        "iou_mean": 0.7229592460911908,
+        "pixel_acc": 0.9928962170506755,
+        "dice_per_class": [
+          0.9967705301707781,
+          0.894657417264313,
+          0.7008922626188554,
+          0.9192838857259854,
+          0.8945902436764874,
+          0.9522430589705094,
+          0.6236075844693384,
+          0.872514890212486,
+          0.7798036134439585
+        ],
+        "iou_per_class": [
+          0.9935618521458074,
+          0.8093937854544393,
+          0.5395181957986007,
+          0.8506247603641675,
+          0.8092838321346688,
+          0.9088396570628966,
+          0.45307397616629225,
+          0.773859346467964,
+          0.6390804152804974
+        ]
+      }
+    },
+    "checkpoint_keys": [
+      "epoch",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "val_metrics"
+    ]
+  }
+}
